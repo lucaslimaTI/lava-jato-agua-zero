@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" onclick="checar();" class="check" name="Limpeza interna" id="servico1">
+    <input type="checkbox" onclick="checar();" class="check" name="Polimento dos vidrosssssss" id="servico2">
+    <div id="res"></div>
+    <button onclick="checar();">checar</button>
+    <script>
+        function checar(){
+        var arr = [];
+        var inputElements = document.getElementsByClassName('check');
+        for(var i=0; inputElements[i]; ++i)
+        {
+            if(inputElements[i].checked)
+            {
+                arr.push(inputElements[i].name);
+            }
+
+        }
+        document.querySelector('#res').innerHTML = arr;
+    }
+    </script>
+
+</body>
+</html>
